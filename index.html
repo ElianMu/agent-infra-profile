@@ -218,9 +218,10 @@ body[data-lang="zh"] .lang.zh { display: inline !important; }
 .skill-applied a { text-decoration: none; border-bottom: 1px solid rgba(25,23,19,.32); text-transform: none; font-family: var(--sans); color: var(--ink); }
 
 /* Flow diagrams */
-.flow-diagram { display: flex; align-items: stretch; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; padding-bottom: .35rem; min-width: 0; width: 100%; }
-.flow-node { flex: 0 0 auto; display: flex; align-items: center; border: 1px solid var(--line); border-radius: 3px; padding: .5rem .7rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .03em; text-transform: uppercase; color: var(--ink); background: rgba(255,255,255,.4); white-space: nowrap; }
-.flow-arrow { flex: 0 0 auto; display: flex; align-items: center; padding: 0 .55rem; color: var(--soft); font-family: var(--mono); font-size: .85rem; }
+.flow-diagram { display: flex; align-items: center; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; padding: .4rem 0 .6rem; min-width: 0; width: 100%; }
+.flow-node { flex: 0 0 auto; display: flex; align-items: center; gap: .45rem; padding: 0; font-family: var(--mono); font-size: .66rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
+.flow-node::before { content: ""; flex: 0 0 auto; width: 5px; height: 5px; border-radius: 50%; background: var(--ink); }
+.flow-arrow { flex: 1 1 auto; min-width: 1.5rem; height: 1px; margin: 0 .65rem; background: var(--line); font-size: 0; color: transparent; }
 .flow-diagram--hero { margin: clamp(1.75rem, 3.5vw, 2.5rem) auto 0; max-width: 100%; }
 @media (min-width: 992px) {
   .flow-diagram--hero { justify-content: center; }
@@ -711,9 +712,9 @@ body[data-lang="zh"] .footer-center {
 <nav class="nav-links">
 <a href="#home"><span class="lang en">01 Home</span><span class="lang zh">01 首页</span></a>
 <a href="#about"><span class="lang en">02 About</span><span class="lang zh">02 关于</span></a>
-<a href="#projects"><span class="lang en">04 Projects</span><span class="lang zh">04 项目</span></a>
-<a href="#skills"><span class="lang en">05 Skills</span><span class="lang zh">05 技能</span></a>
-<a href="#contact"><span class="lang en">06 Contact</span><span class="lang zh">06 联系</span></a>
+<a href="#projects"><span class="lang en">03 Projects</span><span class="lang zh">03 项目</span></a>
+<a href="#skills"><span class="lang en">04 Skills</span><span class="lang zh">04 技能</span></a>
+<a href="#contact"><span class="lang en">05 Contact</span><span class="lang zh">05 联系</span></a>
 </nav>
 <div class="nav-right">
 <a href="mailto:ym3178@columbia.edu"><span class="lang en">Contact ↗</span><span class="lang zh">联系 ↗</span></a>
