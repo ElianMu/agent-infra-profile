@@ -4,7 +4,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Yizhang Mu — Portfolio</title>
+<title>Yizhang Mu — AI Agent Builder &amp; Agent Infrastructure</title>
+<meta name="description" content="Yizhang Mu — AI Agent Builder and Agent Infrastructure engineer. M.S. Computational Design Practices, Columbia University. Building reliable AI agents, LLM workflows, and production-oriented systems, including STROLLANE · NYC."/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Yizhang Mu — AI Agent Builder &amp; Agent Infrastructure"/>
+<meta property="og:description" content="Building reliable AI agents, LLM workflows, and production-oriented systems. Featured project: STROLLANE · NYC."/>
+<meta property="og:url" content="https://elianmu.github.io/agent-infra-profile/"/>
+<meta name="theme-color" content="#f3f0e8"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23191713'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23f3f0e8' text-anchor='middle'%3EYM%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
 <style>:root {
   --paper: #f3f0e8;
   --ink: #191713;
@@ -19,6 +26,10 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; width: 100%; overflow-x: hidden; background: var(--paper); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: .001ms !important; animation-duration: .001ms !important; }
+}
 body {
   margin: 0;
   width: 100%;
@@ -143,7 +154,7 @@ body[data-lang="zh"] .lang.zh { display: inline !important; }
 .about-edu-heading { font-family: var(--serif); font-size: clamp(3.6rem, 6vw, 5.25rem); line-height: .9; letter-spacing: -.04em; }
 .about-edu-copy { columns: 2; column-gap: clamp(2rem, 4vw, 3.5rem); font-family: var(--serif); font-size: clamp(.98rem, 1.2vw, 1.08rem); line-height: 1.65; color: #3f3a34; }
 .about-edu-copy p { margin: 0; break-inside: avoid; }
-.about-edu-copy p + p { break-before: column; }
+.about-edu-copy p + p { break-before: auto; margin-top: 1.1rem; }
 .about-edu-copy .dropcap::first-letter { float: left; font-size: 4.4em; line-height: .73; padding-right: .1em; padding-top: .08em; }
 .about-edu-contact { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: .75rem; margin-top: clamp(1.4rem, 2.5vw, 2rem); padding-top: .9rem; border-top: 1px solid var(--line); font-size: .8rem; color: var(--warm); overflow-wrap: anywhere; }
 .education-band { border-top: 1px solid var(--line); padding-top: clamp(1.25rem, 2.5vw, 1.8rem); }
@@ -184,6 +195,8 @@ body[data-lang="zh"] .lang.zh { display: inline !important; }
 .pc-n { font-family: var(--serif); font-size: clamp(2.6rem, 4vw, 3.2rem); line-height: .95; color: #bfb6aa; }
 .pc-h { min-height: 2.8em; margin: .5rem 0 .75rem; font-family: var(--serif); font-size: clamp(1rem, 1.3vw, 1.18rem); line-height: 1.16; color: var(--ink); }
 .pc-t { font-family: var(--serif); font-size: clamp(.77rem, .9vw, .86rem); line-height: 1.48; color: #514c45; overflow-wrap: anywhere; }
+.pc-project-divider { display: flex; align-items: baseline; gap: .75rem; margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1rem; border-top: 1px solid var(--line); }
+.pc-project.project-secondary { padding-top: 0; }
 
 /* Skills */
 .case-title-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--line); }
@@ -686,22 +699,22 @@ body[data-lang="zh"] .footer-center {
 </div>
 <div class="cover-center">
 <div class="cover-pretitle">
-<span class="lang en">AI PRODUCT · AGENT SYSTEMS · RESEARCH</span>
-<span class="lang zh">AI 产品 · 智能体系统 · 研究</span>
+<span class="lang en">AI AGENT ENGINEERING · AGENT INFRASTRUCTURE · LLM SYSTEMS</span>
+<span class="lang zh">AI 智能体工程 · Agent 基础设施 · LLM 系统</span>
 </div>
 <h1 class="hero-title centered-name"><span class="lang en">YIZHANG MU</span><span class="lang zh">穆奕璋</span></h1>
 <div class="cover-hairline"></div>
 <div class="hero-role centered-role">
-<span class="lang en">AI Product &amp; Agent Builder</span>
-<span class="lang zh">AI 产品经理与智能体构建者</span>
+<span class="lang en">AI Agent Builder · Agent Infrastructure</span>
+<span class="lang zh">AI 智能体构建者 · Agent 基础设施工程师</span>
 </div>
 <div class="hero-stack centered-stack">
-<span class="lang en">LLMs · RAG · AI Applications · Computational Design Practices</span>
-<span class="lang zh">大语言模型 · RAG · AI 应用 · 计算设计实践</span>
+<span class="lang en">Agent Infrastructure · LangGraph · RAG · LLM Applications · Computational Design Practices</span>
+<span class="lang zh">Agent 基础设施 · LangGraph · RAG · LLM 应用 · 计算设计实践</span>
 </div>
 <p class="hero-copy centered-copy">
-<span class="lang en">Turning user problems into reliable AI product decisions, systems, and measurable workflows.</span>
-<span class="lang zh">把用户问题转化为可靠的 AI 产品决策、系统与可衡量的工作流。</span>
+<span class="lang en">Designing and building reliable AI agents — from LLM workflows and tool integration to the data infrastructure and deterministic systems that make them production-ready.</span>
+<span class="lang zh">设计并构建可靠的 AI 智能体——从大语言模型工作流、工具集成，到让系统在生产环境中可靠运行的数据基础设施与确定性组件。</span>
 </p>
 </div>
 <div class="cover-bottom">
@@ -711,8 +724,8 @@ body[data-lang="zh"] .footer-center {
 <span class="lang zh">个人定位</span>
 </div>
 <div>
-<span class="lang en">Product Manager<br/>AI Product &amp; Agent Builder</span>
-<span class="lang zh">产品经理<br/>AI 产品与智能体构建者</span>
+<span class="lang en">AI Agent Builder<br/>Agent Infrastructure Engineer</span>
+<span class="lang zh">AI 智能体构建者<br/>Agent 基础设施工程师</span>
 </div>
 </div>
 <div class="cover-bottom-cell cover-quote">
@@ -725,8 +738,8 @@ body[data-lang="zh"] .footer-center {
 <span class="lang zh">关注方向</span>
 </div>
 <div>
-<span class="lang en">LLMs · Agents · RAG<br/>Product Systems · Evaluation</span>
-<span class="lang zh">大语言模型 · 智能体 · RAG<br/>产品系统 · 评测</span>
+<span class="lang en">LLMs · Agents · RAG<br/>Agent Infrastructure · Evaluation</span>
+<span class="lang zh">大语言模型 · 智能体 · RAG<br/>Agent 基础设施 · 评测</span>
 </div>
 </div>
 </div>
@@ -749,12 +762,24 @@ body[data-lang="zh"] .footer-center {
 </div>
 <div class="about-edu-copy">
 <p class="dropcap">
-<span class="lang en">I’m Yizhang Mu, a Product Manager and AI Product &amp; Agent Builder pursuing an M.S. in Computational Design Practices at Columbia University. I turn user problems into AI product decisions—defining what the system should do, where AI creates value, and where deterministic logic is needed for reliability and control.</span>
-<span class="lang zh">我是穆奕璋，一名产品经理与 AI 产品及智能体构建者，目前在哥伦比亚大学攻读计算设计实践理学硕士。我把用户问题转化为 AI 产品决策：明确系统应该做什么、AI 在哪里真正创造价值，以及哪些环节需要确定性逻辑来保证可靠性与可控性。</span>
+<span class="lang en">I’m a graduate student in Computational Design Practices at Columbia University, focused on AI Agent Engineering, Agent Infrastructure, and AI-native applications.</span>
+<span class="lang zh">我是哥伦比亚大学计算设计实践专业的研究生，专注于 AI 智能体工程、Agent 基础设施与 AI 原生应用。</span>
 </p>
 <p>
-<span class="lang en">I work across the full product cycle, from problem discovery and product definition to system design, prototyping, and evaluation. My projects use LLMs, agents, RAG, and multimodal systems to build workflows for intent understanding, task planning, retrieval, evidence grounding, reasoning, and verification. I translate these computational capabilities into product requirements, interaction flows, working prototypes, and measurable evaluation criteria.</span>
-<span class="lang zh">我参与完整的产品周期，从问题发现、产品定义，到系统设计、原型开发与评测。我的项目使用大语言模型、智能体、RAG 与多模态系统，构建意图理解、任务规划、检索、证据锚定、推理与验证工作流。我进一步把这些计算能力转化为产品需求、交互流程、可运行原型和可量化的评测标准。</span>
+<span class="lang en">My work combines LLMs, RAG, agentic workflows, and software engineering to build intelligent systems that move beyond prompting into real-world execution. My projects include an AI-powered research reading agent and STROLLANE · NYC, a personalized City Walk platform integrating LLM-based intent interpretation, geospatial data, multi-objective route optimization, and real-time navigation.</span>
+<span class="lang zh">我的工作结合大语言模型、RAG、智能体工作流与软件工程，构建超越提示词、能够在真实世界中执行任务的智能系统。我的项目包括一个 AI 论文阅读智能体，以及 STROLLANE · NYC——一个整合了基于 LLM 的意图理解、地理空间数据、多目标路线优化与实时导航的个性化城市漫步平台。</span>
+</p>
+<p>
+<span class="lang en">I’m particularly interested in the infrastructure behind reliable AI agents: tool calling, workflow orchestration, state and memory management, retrieval, structured outputs, evaluation, API integration, and fault tolerance.</span>
+<span class="lang zh">我尤其关注支撑可靠 AI 智能体的基础设施：工具调用、工作流编排、状态与记忆管理、检索、结构化输出、评测、API 集成与容错处理。</span>
+</p>
+<p>
+<span class="lang en">My technical experience includes Python, LLM APIs, RAG, LangGraph-style workflows, REST APIs, GIS, web development, and Git. I’m further developing my expertise in Docker, Kubernetes, MCP, AgentOps, observability, and production-grade agent architectures.</span>
+<span class="lang zh">我的技术经验包括 Python、LLM API、RAG、LangGraph 风格的工作流、REST API、GIS、Web 开发与 Git。我正在进一步深入学习 Docker、Kubernetes、MCP、AgentOps、可观测性与生产级智能体架构。</span>
+</p>
+<p>
+<span class="lang en">I’m seeking opportunities in AI Agent Engineering, Agent Infrastructure, and AI Applications, with a focus on building scalable, reliable, and production-ready agentic systems.</span>
+<span class="lang zh">我正在寻找 AI 智能体工程、Agent 基础设施与 AI 应用方向的机会，专注于构建可扩展、可靠且生产就绪的智能体系统。</span>
 </p>
 </div>
 <div class="about-edu-contact">
@@ -805,10 +830,54 @@ body[data-lang="zh"] .footer-center {
 <span class="num">04</span>
 <h2><span class="lang en">Projects</span><span class="lang zh">项目</span></h2>
 </div>
-<div class="eyebrow"><span class="lang en">Selected Project · Case Study</span><span class="lang zh">精选项目 · 案例研究</span></div>
+<div class="eyebrow"><span class="lang en">Featured &amp; Selected Projects</span><span class="lang zh">重点与精选项目</span></div>
 </div>
 <div class="pc-project">
 <div class="pc-project-num">01</div>
+<div class="pc-project-main">
+<h3>STROLLANE · NYC</h3>
+<div class="pc-project-sub">
+<span class="lang en">AI-Powered Personalized City Walk &amp; Urban Navigation Platform</span>
+<span class="lang zh">AI 驱动的个性化城市漫步与城市导航平台</span>
+</div>
+<div class="pc-project-meta">
+<div><span class="lang en">2026</span><span class="lang zh">2026</span></div>
+<div><strong><span class="lang en">Independent Project</span><span class="lang zh">独立项目</span></strong> · <a class="project-link" href="https://elianmu.github.io/streetwise/" target="_blank"><span class="lang en">Live Demo ↗</span><span class="lang zh">在线演示 ↗</span></a> · <a class="project-link" href="https://github.com/ElianMu/streetwise" target="_blank"><span class="lang en">GitHub ↗</span><span class="lang zh">代码仓库 ↗</span></a></div>
+</div>
+</div>
+<div class="pc-project-summary">
+<div class="eyebrow"><span class="lang en">Overview</span><span class="lang zh">项目概述</span></div>
+<div class="pc-overview-text">
+<span class="lang en">A personalized City Walk platform that transforms natural-language walking preferences into data-informed urban routes, integrating LLM workflows, geospatial data infrastructure, route optimization, and interactive navigation. Independently conceived, designed, and developed.</span>
+<span class="lang zh">一个个性化城市漫步平台，将自然语言的步行偏好转化为基于数据的城市路线，整合了 LLM 工作流、地理空间数据基础设施、路线优化与交互式导航。由本人独立构思、设计并开发。</span>
+</div>
+<div class="pc-stats">
+<div><strong>97/125</strong><span><span class="lang en">Datasets Integrated</span><span class="lang zh">集成数据集</span></span></div>
+<div><strong>2.69M+</strong><span><span class="lang en">Source Records</span><span class="lang zh">源数据记录</span></span></div>
+<div><strong>12</strong><span><span class="lang en">Experience Dimensions</span><span class="lang zh">体验维度</span></span></div>
+<div><strong>74%</strong><span><span class="lang en">Map Layer Reduction</span><span class="lang zh">地图图层精简</span></span></div>
+</div>
+</div>
+</div>
+<div class="pc-case-label">
+<div class="pc-case-label-left">
+<span class="num">04</span>
+<h3><span class="lang en">Case Study</span><span class="lang zh">案例研究</span></h3>
+</div>
+<div class="eyebrow"><span class="lang en">Detailed Process · Method · Results</span><span class="lang zh">过程 · 方法 · 结果</span></div>
+</div>
+<div class="pc-columns">
+<article class="pc-col"><div class="pc-n">01</div><div class="pc-h"><span class="lang en">LLM Workflow &amp; Agent Orchestration</span><span class="lang zh">LLM 工作流与智能体编排</span></div><div class="pc-t"><span class="lang en">Built a multi-stage AI workflow integrating natural-language interpretation, geospatial retrieval, route optimization, and deterministic validation, with conversational state updates and fallback handling. The agent runtime uses LangGraph and LangChain with tool-calling, feature-flagged behind an explicit AGENT_ENABLED switch so the core routing service stays deterministic and dependency-free when the agent layer is off.</span><span class="lang zh">构建了多阶段 AI 工作流，整合自然语言解析、地理空间检索、路线优化与确定性校验，并支持对话式状态更新与兜底处理。智能体运行时基于 LangGraph 与 LangChain 实现工具调用，通过显式的 AGENT_ENABLED 开关做特性隔离，关闭时核心路由服务保持确定性且无额外依赖。</span></div></article>
+<article class="pc-col"><div class="pc-n">02</div><div class="pc-h"><span class="lang en">Tool Integration &amp; Reliability</span><span class="lang zh">工具集成与可靠性</span></div><div class="pc-t"><span class="lang en">Integrated location search, urban data queries, and routing services through REST APIs; enforced route constraints and implemented structured error handling and dynamic replanning so failures degrade gracefully instead of fabricating a route.</span><span class="lang zh">通过 REST API 集成地点搜索、城市数据查询与路线服务；强制执行路线约束，并实现结构化错误处理与动态重规划，失败时优雅降级而不是伪造路线。</span></div></article>
+<article class="pc-col"><div class="pc-n">03</div><div class="pc-h"><span class="lang en">Data Infrastructure</span><span class="lang zh">数据基础设施</span></div><div class="pc-t"><span class="lang en">Integrated 97 of 125 registered datasets containing 2.69M+ source records; mapped approximately 10,500 Manhattan street segments to 12 walking-experience dimensions using spatial indexing and LION–OSM matching.</span><span class="lang zh">集成了 125 个注册数据集中的 97 个，共计 269 万余条源数据记录；通过空间索引与 LION–OSM 匹配，将约 10,500 条曼哈顿街段映射到 12 个步行体验维度。</span></div></article>
+<article class="pc-col"><div class="pc-n">04</div><div class="pc-h"><span class="lang en">Routing &amp; Navigation Engine</span><span class="lang zh">路线规划与导航引擎</span></div><div class="pc-t"><span class="lang en">Applied A*, Dijkstra, and 2-opt for personalized multi-stop planning; built a 13-state GPS navigation engine with 14 replayable simulation scenarios and reduced map layers from approximately 240 to 63 (74%).</span><span class="lang zh">采用 A*、Dijkstra 与 2-opt 算法实现个性化多站点路线规划；构建了具有 13 个状态的 GPS 导航引擎，支持 14 个可重放的模拟场景，并将地图图层从约 240 个精简至 63 个（减少 74%）。</span></div></article>
+<article class="pc-col"><div class="pc-n">05</div><div class="pc-h"><span class="lang en">Testing &amp; Validation</span><span class="lang zh">测试与验证</span></div><div class="pc-t"><span class="lang en">Backed by an automated test suite spanning routing, weather-aware cost adjustments, GPS navigation replay, spatial geometry, and urban-data layers, plus browser checks across desktop and mobile viewports — reliability treated as a first-class engineering concern, not an afterthought.</span><span class="lang zh">配备覆盖路线规划、天气感知成本调整、GPS 导航回放、空间几何与城市数据图层的自动化测试，并在桌面与移动端视口下进行真实浏览器检查——将可靠性作为一等工程目标，而非事后补充。</span></div></article>
+</div>
+<div class="pc-project-divider">
+<span class="eyebrow"><span class="lang en">Selected Project</span><span class="lang zh">精选项目</span></span>
+</div>
+<div class="pc-project project-secondary">
+<div class="pc-project-num">02</div>
 <div class="pc-project-main">
 <h3><span class="lang en">Xiuliu</span><span class="lang zh">秀流</span></h3>
 <div class="pc-project-sub">
@@ -869,52 +938,52 @@ body[data-lang="zh"] .footer-center {
 <div class="skill-label">
 <div class="skill-no">01</div>
 <div class="skill-title">
-<span class="lang en">AI / Technical</span>
-<span class="lang zh">AI / 技术</span>
+<span class="lang en">AI Agent Engineering</span>
+<span class="lang zh">AI 智能体工程</span>
 </div>
 </div>
 <div class="skill-body">
-<span class="lang en">Python, SQL, LLM Applications, Structure-Aware RAG (Chunking / Hybrid Retrieval / Reranking), Agent Workflows, Tool Routing, Prompt Engineering, Git</span>
-<span class="lang zh">Python、SQL、大语言模型应用、结构感知 RAG（切分 / 混合检索 / 重排）、智能体工作流、工具路由、提示词工程、Git</span>
+<span class="lang en">LangGraph, LangChain, Agent Workflows &amp; Orchestration, Tool Calling / Tool Routing, Prompt Engineering, Agent Evaluation</span>
+<span class="lang zh">LangGraph、LangChain、智能体工作流与编排、工具调用 / 工具路由、提示词工程、智能体评测</span>
 </div>
 </article>
 <article class="skill">
 <div class="skill-label">
 <div class="skill-no">02</div>
 <div class="skill-title">
-<span class="lang en">AI Product</span>
-<span class="lang zh">AI 产品</span>
+<span class="lang en">LLM &amp; Retrieval Systems</span>
+<span class="lang zh">LLM 与检索系统</span>
 </div>
 </div>
 <div class="skill-body">
-<span class="lang en">User Scenario Analysis, AI Feature Definition &amp; Scope Design, AI Interaction Design, AI Evaluation &amp; Release Gates, Prompt Experimentation, Evidence &amp; Citation Mechanisms, Bad-Case Analysis, Fallback &amp; Degradation Design</span>
-<span class="lang zh">用户场景洞察、AI 功能定义与边界拆分、AI 交互设计、AI 评测设计与上线门禁、提示词实验、证据与引用机制、失败案例归因、降级与兜底设计</span>
+<span class="lang en">Large Language Models, Structure-Aware RAG (Chunking / Hybrid Retrieval / Reranking), Retrieval-Augmented Generation, Context Engineering, Evidence &amp; Citation Grounding</span>
+<span class="lang zh">大语言模型、结构感知 RAG（切分 / 混合检索 / 重排）、检索增强生成、上下文工程、证据与引用锚定</span>
 </div>
 </article>
 <article class="skill">
 <div class="skill-label">
 <div class="skill-no">03</div>
 <div class="skill-title">
-<span class="lang en">Product / Data</span>
-<span class="lang zh">产品 / 数据</span>
+<span class="lang en">Agent Infrastructure &amp; Backend</span>
+<span class="lang zh">Agent 基础设施与后端</span>
 </div>
 </div>
 <div class="skill-body">
-<span class="lang en">User Research, Metrics Design, Data Experimentation, User Behavior Analysis, Conversion Funnels, Data Review &amp; Analysis, Product Solution Design</span>
-<span class="lang zh">用户研究、指标体系、数据实验设计、用户行为分析、转化漏斗、数据复盘、产品方案设计</span>
+<span class="lang en">Python, SQL, REST APIs, SQLite, Git, GitHub Actions, Docker, Deployment &amp; Monitoring</span>
+<span class="lang zh">Python、SQL、REST API、SQLite、Git、GitHub Actions、Docker、部署与监控</span>
 </div>
 </article>
 <article class="skill">
 <div class="skill-label">
 <div class="skill-no">04</div>
 <div class="skill-title">
-<span class="lang en">Prototyping / Tools</span>
-<span class="lang zh">原型 / 工具</span>
+<span class="lang en">Product, Data &amp; Design</span>
+<span class="lang zh">产品、数据与设计</span>
 </div>
 </div>
 <div class="skill-body">
-<span class="lang en">Figma, Web Prototype, Excel, PowerPoint, Photoshop, Illustrator</span>
-<span class="lang zh">Figma、网页原型、Excel、PowerPoint、Photoshop、Illustrator</span>
+<span class="lang en">Geospatial Processing, Spatial Indexing, Graph Algorithms (A*, Dijkstra), Metrics Design &amp; Data Experimentation, AI Evaluation &amp; Release Gates, Figma, Web Prototyping</span>
+<span class="lang zh">地理空间处理、空间索引、图算法（A*、Dijkstra）、指标体系与数据实验、AI 评测与上线门禁、Figma、网页原型</span>
 </div>
 </article>
 </div>
@@ -943,7 +1012,7 @@ body[data-lang="zh"] .footer-center {
     btn.textContent = isZh ? '英文' : 'Chinese';
     btn.setAttribute('aria-label', isZh ? '切换到英文' : 'Switch to Chinese');
     document.documentElement.lang = isZh ? 'zh-CN' : 'en';
-    document.title = isZh ? '穆奕璋 — 作品集' : 'Yizhang Mu — Portfolio';
+    document.title = isZh ? '穆奕璋 — AI 智能体构建者与 Agent 基础设施' : 'Yizhang Mu — AI Agent Builder & Agent Infrastructure';
   }
 
   btn.addEventListener('click', function() {
