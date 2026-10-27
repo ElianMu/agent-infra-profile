@@ -22,6 +22,7 @@
   --content: 1400px;
   --serif: "Baskerville", "Iowan Old Style", "Times New Roman", serif;
   --sans: "Helvetica Neue", "Avenir Next", Arial, sans-serif;
+  --mono: "SF Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -119,6 +120,7 @@ body[data-lang="zh"] .lang.zh { display: inline !important; }
   align-self: center;
   justify-self: center;
   width: min(100%, 74rem);
+  min-width: 0;
   text-align: center;
   padding: clamp(2.75rem, 7vh, 5.25rem) 0;
 }
@@ -210,6 +212,26 @@ body[data-lang="zh"] .lang.zh { display: inline !important; }
 .skill-no { font-family: var(--serif); font-size: clamp(2.4rem, 3.8vw, 3rem); color: #bfb6aa; }
 .skill-title { font-family: var(--serif); font-size: clamp(1.5rem, 2.4vw, 1.95rem); line-height: 1.1; }
 .skill-body { max-width: 34rem; font-size: clamp(.9rem, 1.1vw, 1rem); line-height: 1.68; color: var(--warm); overflow-wrap: anywhere; }
+.skill-tools { font-family: var(--mono); font-size: .72rem; letter-spacing: .01em; color: var(--ink); line-height: 1.6; }
+.skill-desc { max-width: 32rem; margin-top: .55rem; font-size: clamp(.86rem, 1.05vw, .96rem); line-height: 1.6; color: var(--warm); }
+.skill-applied { margin-top: .75rem; font-family: var(--mono); font-size: .68rem; letter-spacing: .02em; color: var(--warm); text-transform: uppercase; }
+.skill-applied a { text-decoration: none; border-bottom: 1px solid rgba(25,23,19,.32); text-transform: none; font-family: var(--sans); color: var(--ink); }
+
+/* Flow diagrams */
+.flow-diagram { display: flex; align-items: stretch; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; padding-bottom: .35rem; min-width: 0; width: 100%; }
+.flow-node { flex: 0 0 auto; display: flex; align-items: center; border: 1px solid var(--line); border-radius: 3px; padding: .5rem .7rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .03em; text-transform: uppercase; color: var(--ink); background: rgba(255,255,255,.4); white-space: nowrap; }
+.flow-arrow { flex: 0 0 auto; display: flex; align-items: center; padding: 0 .55rem; color: var(--soft); font-family: var(--mono); font-size: .85rem; }
+.flow-diagram--hero { margin: clamp(1.75rem, 3.5vw, 2.5rem) auto 0; max-width: 100%; }
+@media (min-width: 992px) {
+  .flow-diagram--hero { justify-content: center; }
+}
+.flow-caption { font-family: var(--mono); font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; color: var(--warm); margin: 1.1rem 0 .6rem; }
+
+/* Contact */
+.contact-row { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(1.5rem, 3vw, 2.2rem); padding-top: clamp(1.5rem, 3vw, 2.2rem); padding-bottom: clamp(1.5rem, 3vw, 2.2rem); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.contact-item { min-width: 9rem; }
+.contact-item-label { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--warm); margin-bottom: .4rem; }
+.contact-item a { font-family: var(--serif); font-size: clamp(1.1rem, 1.6vw, 1.35rem); text-decoration: none; border-bottom: 1px solid rgba(25,23,19,.32); padding-bottom: 1px; overflow-wrap: anywhere; }
 .footer { position: static; width: min(100%, var(--content)); margin: clamp(2rem, 5vw, 4rem) auto 0; padding-top: 1rem; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; font-size: .75rem; line-height: 1.45; color: var(--warm); }
 .footer-center { text-align: center; font-family: var(--serif); font-style: italic; font-size: .9rem; color: #4c473f; }
 .footer-right { text-align: right; }
@@ -263,6 +285,9 @@ body[data-lang="zh"] .lang.zh { display: inline !important; }
   .nav-links a, .lang-toggle { font-size: .62rem; }
   .hero-cover-centered { grid-template-rows: auto 1fr auto; }
   .cover-meta-top { padding-top: 1rem; font-size: .68rem; }
+  .flow-diagram { justify-content: flex-start !important; }
+  .flow-node { font-size: .62rem; padding: .42rem .55rem; }
+  .contact-row { gap: 1.5rem 2rem; }
   .cover-center { padding: 2.7rem 0 3.1rem; }
   .cover-pretitle { font-size: .58rem; letter-spacing: .18em; margin-bottom: 1rem; }
   .centered-name { font-size: clamp(3.4rem, 15vw, 5rem); line-height: .9; }
@@ -367,6 +392,7 @@ body[data-lang="zh"] .pc-t,
 body[data-lang="zh"] .section-title,
 body[data-lang="zh"] .skill-no,
 body[data-lang="zh"] .skill-title,
+body[data-lang="zh"] .contact-item a,
 body[data-lang="zh"] .footer-center {
   font-family: var(--zh-serif) !important;
 }
@@ -387,6 +413,8 @@ body[data-lang="zh"] .coursework-compact,
 body[data-lang="zh"] .pc-project-meta,
 body[data-lang="zh"] .pc-stats span,
 body[data-lang="zh"] .skill-body,
+body[data-lang="zh"] .skill-desc,
+body[data-lang="zh"] .contact-item-label,
 body[data-lang="zh"] .footer {
   font-family: var(--zh-sans) !important;
 }
@@ -685,6 +713,7 @@ body[data-lang="zh"] .footer-center {
 <a href="#about"><span class="lang en">02 About</span><span class="lang zh">02 关于</span></a>
 <a href="#projects"><span class="lang en">04 Projects</span><span class="lang zh">04 项目</span></a>
 <a href="#skills"><span class="lang en">05 Skills</span><span class="lang zh">05 技能</span></a>
+<a href="#contact"><span class="lang en">06 Contact</span><span class="lang zh">06 联系</span></a>
 </nav>
 <div class="nav-right">
 <a href="mailto:ym3178@columbia.edu"><span class="lang en">Contact ↗</span><span class="lang zh">联系 ↗</span></a>
@@ -716,6 +745,17 @@ body[data-lang="zh"] .footer-center {
 <span class="lang en">Designing and building reliable AI agents — from LLM workflows and tool integration to the data infrastructure and deterministic systems that make them production-ready.</span>
 <span class="lang zh">设计并构建可靠的 AI 智能体——从大语言模型工作流、工具集成，到让系统在生产环境中可靠运行的数据基础设施与确定性组件。</span>
 </p>
+<div aria-label="Agent system pipeline: input, orchestration, tools and retrieval, validation, output" class="flow-diagram flow-diagram--hero" role="img">
+<span class="flow-node"><span class="lang en">Input</span><span class="lang zh">输入</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Agent Orchestration</span><span class="lang zh">智能体编排</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Tools &amp; Retrieval</span><span class="lang zh">工具与检索</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Validation</span><span class="lang zh">校验</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Output</span><span class="lang zh">输出</span></span>
+</div>
 </div>
 <div class="cover-bottom">
 <div class="cover-bottom-cell cover-colophon">
@@ -866,6 +906,18 @@ body[data-lang="zh"] .footer-center {
 </div>
 <div class="eyebrow"><span class="lang en">Detailed Process · Method · Results</span><span class="lang zh">过程 · 方法 · 结果</span></div>
 </div>
+<div class="flow-caption"><span class="lang en">Agent Workflow</span><span class="lang zh">智能体工作流</span></div>
+<div aria-label="Agent workflow: natural language input, agent orchestration with LangGraph, tools and geospatial retrieval, deterministic validation, personalized route output" class="flow-diagram" role="img">
+<span class="flow-node"><span class="lang en">NL Input</span><span class="lang zh">自然语言输入</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Agent Orchestration (LangGraph)</span><span class="lang zh">智能体编排（LangGraph）</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Tools &amp; Geospatial Retrieval</span><span class="lang zh">工具与地理空间检索</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Deterministic Validation</span><span class="lang zh">确定性校验</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Route Output</span><span class="lang zh">路线输出</span></span>
+</div>
 <div class="pc-columns">
 <article class="pc-col"><div class="pc-n">01</div><div class="pc-h"><span class="lang en">LLM Workflow &amp; Agent Orchestration</span><span class="lang zh">LLM 工作流与智能体编排</span></div><div class="pc-t"><span class="lang en">Built a multi-stage AI workflow integrating natural-language interpretation, geospatial retrieval, route optimization, and deterministic validation, with conversational state updates and fallback handling. The agent runtime uses LangGraph and LangChain with tool-calling, feature-flagged behind an explicit AGENT_ENABLED switch so the core routing service stays deterministic and dependency-free when the agent layer is off.</span><span class="lang zh">构建了多阶段 AI 工作流，整合自然语言解析、地理空间检索、路线优化与确定性校验，并支持对话式状态更新与兜底处理。智能体运行时基于 LangGraph 与 LangChain 实现工具调用，通过显式的 AGENT_ENABLED 开关做特性隔离，关闭时核心路由服务保持确定性且无额外依赖。</span></div></article>
 <article class="pc-col"><div class="pc-n">02</div><div class="pc-h"><span class="lang en">Tool Integration &amp; Reliability</span><span class="lang zh">工具集成与可靠性</span></div><div class="pc-t"><span class="lang en">Integrated location search, urban data queries, and routing services through REST APIs; enforced route constraints and implemented structured error handling and dynamic replanning so failures degrade gracefully instead of fabricating a route.</span><span class="lang zh">通过 REST API 集成地点搜索、城市数据查询与路线服务；强制执行路线约束，并实现结构化错误处理与动态重规划，失败时优雅降级而不是伪造路线。</span></div></article>
@@ -910,6 +962,18 @@ body[data-lang="zh"] .footer-center {
 </div>
 <div class="eyebrow"><span class="lang en">Detailed Process · Method · Results</span><span class="lang zh">过程 · 方法 · 结果</span></div>
 </div>
+<div class="flow-caption"><span class="lang en">Agent Workflow</span><span class="lang zh">智能体工作流</span></div>
+<div aria-label="Agent workflow: intent understanding, path planning, evidence retrieval, reasoning, verification" class="flow-diagram" role="img">
+<span class="flow-node"><span class="lang en">Intent Understanding</span><span class="lang zh">意图理解</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Path Planning</span><span class="lang zh">路径规划</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Retrieval &amp; Evidence Extraction</span><span class="lang zh">检索与证据提取</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Reasoning</span><span class="lang zh">推理</span></span>
+<span class="flow-arrow">→</span>
+<span class="flow-node"><span class="lang en">Verification</span><span class="lang zh">验证</span></span>
+</div>
 <div class="pc-columns">
 <article class="pc-col"><div class="pc-n">01</div><div class="pc-h"><span class="lang en">Product Discovery &amp; Definition</span><span class="lang zh">产品发现与定义</span></div><div class="pc-t"><span class="lang en">Identified three core pain points in academic paper reading—high effort to assess value, complex reading paths tied to research goals, and difficulty verifying AI-generated conclusions. Defined AI Overview, AI Deep Reading, and AI Assistant modules and independently built an interactive web prototype. Set product boundaries around trustworthy single-paper reading, no unsupported inference, and no replacement of academic judgment.</span><span class="lang zh">识别论文阅读中的三类核心痛点：判断论文价值成本高、阅读路径与研究目标耦合复杂，以及 AI 生成结论难以验证。定义 AI 导读、AI 精读与 AI 助手三个模块，并独立完成交互式网页原型。产品边界明确为可信的单篇论文阅读、不做无证据推断、不替代学术判断。</span></div></article>
 <article class="pc-col"><div class="pc-n">02</div><div class="pc-h"><span class="lang en">AI System Architecture</span><span class="lang zh">AI 系统架构</span></div><div class="pc-t"><span class="lang en">Established “LLMs for understanding, deterministic systems for rules.” Used the LLM layer for intent understanding, task planning, reasoning, and response generation, while deterministic components handle document parsing, structured retrieval, source anchoring, and verification. Replaced generic RAG with single-document structure-aware RAG and constrained planning through task-to-section routing templates.</span><span class="lang zh">确立“大语言模型负责理解，确定性系统负责规则”的架构。大语言模型层承担意图理解、任务规划、推理与回答生成；确定性组件负责文档解析、结构化检索、来源锚定与验证。用单文档结构感知 RAG 替代通用 RAG，并通过任务到章节的路由模板约束规划过程。</span></div></article>
@@ -942,10 +1006,12 @@ body[data-lang="zh"] .footer-center {
 <span class="lang zh">AI 智能体工程</span>
 </div>
 </div>
-<div class="skill-body">
-<span class="lang en">LangGraph, LangChain, Agent Workflows &amp; Orchestration, Tool Calling / Tool Routing, Prompt Engineering, Agent Evaluation</span>
-<span class="lang zh">LangGraph、LangChain、智能体工作流与编排、工具调用 / 工具路由、提示词工程、智能体评测</span>
+<div class="skill-tools">LangGraph · LangChain · Tool Calling · Agent Orchestration · Agent Evaluation</div>
+<div class="skill-desc">
+<span class="lang en">Multi-stage agent workflows with tool-calling, conversational state, and fallback handling.</span>
+<span class="lang zh">具备工具调用、对话式状态管理与兜底处理的多阶段智能体工作流。</span>
 </div>
+<div class="skill-applied"><span class="lang en">Applied in</span><span class="lang zh">应用于</span> <a class="project-link" href="#projects">STROLLANE · NYC</a></div>
 </article>
 <article class="skill">
 <div class="skill-label">
@@ -955,10 +1021,12 @@ body[data-lang="zh"] .footer-center {
 <span class="lang zh">LLM 与检索系统</span>
 </div>
 </div>
-<div class="skill-body">
-<span class="lang en">Large Language Models, Structure-Aware RAG (Chunking / Hybrid Retrieval / Reranking), Retrieval-Augmented Generation, Context Engineering, Evidence &amp; Citation Grounding</span>
-<span class="lang zh">大语言模型、结构感知 RAG（切分 / 混合检索 / 重排）、检索增强生成、上下文工程、证据与引用锚定</span>
+<div class="skill-tools">LLMs · Structure-Aware RAG · Hybrid Retrieval / Reranking · Context Engineering</div>
+<div class="skill-desc">
+<span class="lang en">Structure-aware RAG with evidence grounding and citation verification for single-document reading.</span>
+<span class="lang zh">面向单文档阅读的结构感知 RAG，具备证据锚定与引用核验能力。</span>
 </div>
+<div class="skill-applied"><span class="lang en">Applied in</span><span class="lang zh">应用于</span> <a class="project-link" href="https://ym3178-afk.github.io/Xiuliu-Elian/" target="_blank">Xiuliu</a></div>
 </article>
 <article class="skill">
 <div class="skill-label">
@@ -968,24 +1036,62 @@ body[data-lang="zh"] .footer-center {
 <span class="lang zh">Agent 基础设施与后端</span>
 </div>
 </div>
-<div class="skill-body">
-<span class="lang en">Python, SQL, REST APIs, SQLite, Git, GitHub Actions, Docker, Deployment &amp; Monitoring</span>
-<span class="lang zh">Python、SQL、REST API、SQLite、Git、GitHub Actions、Docker、部署与监控</span>
+<div class="skill-tools">Python · SQL · REST APIs · SQLite · Git · GitHub Actions · Docker</div>
+<div class="skill-desc">
+<span class="lang en">Dependency-free Python services with feature-flagged agent layers and automated test suites.</span>
+<span class="lang zh">无额外依赖的 Python 服务，具备特性开关的智能体层与自动化测试套件。</span>
 </div>
+<div class="skill-applied"><span class="lang en">Applied in</span><span class="lang zh">应用于</span> <a class="project-link" href="#projects">STROLLANE · NYC</a></div>
 </article>
 <article class="skill">
 <div class="skill-label">
 <div class="skill-no">04</div>
 <div class="skill-title">
-<span class="lang en">Product, Data &amp; Design</span>
-<span class="lang zh">产品、数据与设计</span>
+<span class="lang en">Computational Design &amp; Data</span>
+<span class="lang zh">计算设计与数据</span>
 </div>
 </div>
-<div class="skill-body">
-<span class="lang en">Geospatial Processing, Spatial Indexing, Graph Algorithms (A*, Dijkstra), Metrics Design &amp; Data Experimentation, AI Evaluation &amp; Release Gates, Figma, Web Prototyping</span>
-<span class="lang zh">地理空间处理、空间索引、图算法（A*、Dijkstra）、指标体系与数据实验、AI 评测与上线门禁、Figma、网页原型</span>
+<div class="skill-tools">Geospatial Processing · Spatial Indexing · Graph Algorithms (A*, Dijkstra) · Data Experimentation</div>
+<div class="skill-desc">
+<span class="lang en">Dataset integration and spatial matching at scale, with controlled evaluation across versions.</span>
+<span class="lang zh">大规模数据集集成与空间匹配，并通过多版本对照实验进行评测。</span>
 </div>
+<div class="skill-applied"><span class="lang en">Applied in</span><span class="lang zh">应用于</span> <a class="project-link" href="#projects">STROLLANE · NYC</a></div>
 </article>
+</div>
+</section>
+<!-- PAGE 5: CONTACT -->
+<section class="sheet" id="contact">
+<div class="case-title-row">
+<div>
+<div class="section-kicker"><span class="lang en">06 — Contact</span><span class="lang zh">06 — 联系</span></div>
+<h2 class="section-title" style="margin:4px 0 0;">
+<span class="lang en">Connect</span>
+<span class="lang zh">联系</span>
+</h2>
+</div>
+<div class="eyebrow">
+<span class="lang en">Let’s Build Something Reliable</span>
+<span class="lang zh">一起构建可靠的系统</span>
+</div>
+</div>
+<div class="contact-row">
+<div class="contact-item">
+<div class="contact-item-label"><span class="lang en">GitHub</span><span class="lang zh">GitHub</span></div>
+<a href="https://github.com/ElianMu" target="_blank">github.com/ElianMu ↗</a>
+</div>
+<div class="contact-item">
+<div class="contact-item-label"><span class="lang en">LinkedIn</span><span class="lang zh">LinkedIn</span></div>
+<a href="https://www.linkedin.com/in/elianmu3178" target="_blank">linkedin.com/in/elianmu3178 ↗</a>
+</div>
+<div class="contact-item">
+<div class="contact-item-label"><span class="lang en">Email</span><span class="lang zh">邮箱</span></div>
+<a href="mailto:ym3178@columbia.edu">ym3178@columbia.edu</a>
+</div>
+<div class="contact-item">
+<div class="contact-item-label"><span class="lang en">Featured Project</span><span class="lang zh">精选项目</span></div>
+<a href="https://elianmu.github.io/streetwise/" target="_blank"><span class="lang en">STROLLANE Live Demo ↗</span><span class="lang zh">STROLLANE 在线演示 ↗</span></a>
+</div>
 </div>
 <footer class="footer">
 <div><span class="lang en">YIZHANG MU — Portfolio<br/>New York · 2026</span><span class="lang zh">穆奕璋 — 作品集<br/>纽约 · 2026</span></div>
